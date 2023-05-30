@@ -18,8 +18,10 @@ public class Main {
         boolean willbeFalse = new FunctionalWay().searchString(myList, "abc");
         Long endTimeFunctional = System.currentTimeMillis();
 
+        myList = null;
+        myList = getList(ramdomStringListSize);
         Long startTimeTraditional = System.currentTimeMillis();
-        boolean willbeFalseTradtional = new FunctionalWay().searchString(myList, "abc");
+        boolean willbeFalseTradtional = new TraditionalWay().searchString(myList, "abc");
         Long endTimeTraditional = System.currentTimeMillis();
 
         logger.info("Total time for Functional way in ms =" + (endTimeFunctional-startTimeFunctional) + "  and Total time Traditional in ms = " + (endTimeTraditional - startTimeTraditional));
